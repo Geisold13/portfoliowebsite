@@ -25,7 +25,7 @@ li {
 
 section {
     width: 100%;
-    height: 500px;
+    height: 1000px;
     background-color: white;
 }
 
@@ -44,27 +44,33 @@ section {
         screen goes away  */
     position: fixed;
     top: 0;
+    z-index: 3;
 
 }
 
 
 
 .main-nav-styling {
-    width: 80%;
+    width: 65%;
     height: 70px;
 
-    background-color: blue;
+    /* background-color: blue; */
 
     display: flex;
     align-items: center; /* Centers all child elements vertically in container */
     justify-content: flex-end;
 }
 
-.website-title-container {
+.header-title-container {
 
-    width: 300px;
+    width: auto;
     height: 60px;
 
+    margin-left: 150px;
+
+    /* background-color: orange; */
+
+    color: white;
     
     display: flex;
     align-items: center;
@@ -72,15 +78,18 @@ section {
     
     float: left;
 
-    background-color: orange;
-    color: white;
-
 }
+
+.header-title {
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
 .nav-elements-container {
 
     height: 60px;
 
-    background-color: orange;
+    /* background-color: orange; */
 
     display: flex;
     align-items: center;
@@ -95,7 +104,7 @@ section {
     width: 100px;
     height: 50px;
 
-    background-color: red;
+     /* background-color: red; */
 
     display: flex;
     align-items: center;
@@ -108,9 +117,11 @@ section {
     width: 100px;
     height: 40px;
     
-    background-color: purple;
+    /* background-color: purple; */
     color: white;
-    font-size: 20px;
+
+    font-size: 16px;
+    letter-spacing: 2px;
 
     display: flex;
     align-items: center;
@@ -126,22 +137,31 @@ section {
     width: 50px;
     height: 50px;
 
-    background-color: orange;
+    /* background-color: orange; */
 
-    margin-right: 20px;
+    margin-right: 150px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-img {
+/* overrides .nav-image-container to make sure the 
+   github image container has a different margin
+   it takes precedence over .nav-image-container because
+   its below it in the stylesheet */
+.nav-image-container-github {
+    margin-right: 20px;
+}
+
+
+.github-logo {
     width: 40px;
     height: 40px;
 
 }
 
-img:hover {
+.github-logo:hover {
     width: 50px;
     height: 50px;
 }
@@ -170,10 +190,134 @@ img:hover {
 .about-section {
     
     background-color: lightgray;
+
+    display: flex;
+
 }
 
-.portfolio-section {
+.about-section-left-container {
+
+    width: 50%;
+    height: 1000px;
+
+    /*background-color: blueviolet; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about-header {
+    width: auto;
+    height: auto;
+
+    margin-top: 400px;
+    margin-left: 230px;
+
+    color: black;
+    /* background-color: aqua; */
+
+    font-size: 100px;
+    letter-spacing: 3px;
+
+}
+
+.about-sub-header {
+
+    width: auto;
+    height: auto;
+
+    margin-left: 230px;
+
+    color: black;
+    /*background-color: blue; */
+
+    font-size: 60px;
+    font-weight: 500;
     
+}
+
+.about-sub-header-two {
+
+    font-size: 40px;
+}
+
+.portfolio-anchor-button {
+    width: 200px;
+    height: 50px;
+
+    margin-left: 230px;
+    margin-top: 30px;
+
+    /* Used to center text in anchor button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+
+    background-color: rgba(0, 187, 6, 0.8);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.portfolio-anchor-button:hover {
+
+    width: 210px;
+    height: 55px;
+
+    margin-top: 27.5px;
+    background-color: rgba(39, 245, 46, 0.8);
+}
+
+.about-section-right-container {
+
+    width: 50%;
+    height: 1000px;
+
+    /* background-color: orange; */
+
+}
+
+.about-section-photo-container {
+
+    width: 500px;
+    height: 500px;
+    background-color: black;
+
+    margin-top: 250px;
+    margin-left: 230px;
+
+    border-radius: 50px;
+
+    position: absolute;
+    z-index: 1;
+
+}
+
+.about-section-photo-container-two {
+
+    margin-top: 300px;
+    margin-left: 180px;
+
+    position: absolute;
+    z-index: 0;
+
+}
+
+.about-section-photo {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50px;
+
+    object-fit: cover;
+}
+
+
+.portfolio-section {
+
 }
 
 .resume-section {
